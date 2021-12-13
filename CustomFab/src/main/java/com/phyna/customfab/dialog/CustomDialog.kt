@@ -22,7 +22,7 @@ class CustomDialog(private var activity: Activity): BaseDialog(activity){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.custom_dialog, null, false);
+        binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.custom_dialog, null, false);
         setContentView(binding.root);
 
         //loading image
