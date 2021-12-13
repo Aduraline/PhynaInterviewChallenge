@@ -61,3 +61,17 @@ dependencies {
     //Jetpack Datastore
     implementation "androidx.datastore:datastore-preferences:1.0.0"
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.Aduraline'
+                artifactId = 'PhynaInterviewChallenge'
+                version = '1.0.0'
+            }
+        }
+    }
+}
