@@ -1,0 +1,30 @@
+# CustomFab
+
+Step 1. Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+Step 2. Add the dependency
+
+```
+dependencies {
+  implementation 'com.github.Aduraline:PhynaInterviewChallenge:1.0.0'
+}
+```
+
+Step 3. SDK Version
+```
+defaultConfig {
+  ...
+  minSdk 21
+  targetSdk 31
+  ...
+}
+```
