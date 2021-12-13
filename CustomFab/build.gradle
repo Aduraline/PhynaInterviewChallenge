@@ -6,18 +6,6 @@ plugins {
     id 'kotlin-kapt'
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.github.Aduraline'
-            artifactId = 'PhynaInterviewChallenge'
-            version = '1.0.0'
-
-            from components.release
-        }
-    }
-}
-
 android {
     compileSdk 31
 
