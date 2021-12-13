@@ -11,7 +11,7 @@ allprojects {
 }
 ```
 
-Step 2. Add the dependency
+Step 2. Add dependency in app level build.gradle
 
 ```
 dependencies {
@@ -19,17 +19,26 @@ dependencies {
 }
 ```
 
-Step 3. SDK Version
+Step 3. Add kotlin-kapt in app level build.gradle
+
 ```
-defaultConfig {
-  ...
-  minSdk 21
-  targetSdk 31
-  ...
+plugins {
+    ...
+    id 'kotlin-kapt'
 }
 ```
 
-Step 4. Initialize CustomFab
+Step 4. Set dataBinding true in app level build.gradle
+```
+android {
+  ...
+  buildFeatures {
+    dataBinding true
+  }
+}
+```
+
+Step 5. Initialize CustomFab
 
 ```
 class YourApp: Application(), Application.ActivityLifecycleCallbacks {
